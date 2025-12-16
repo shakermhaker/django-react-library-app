@@ -7,7 +7,6 @@ from rest_framework import status
 
 class HelloView(APIView):
     permission_classes = (IsAuthenticated, )
-    @api_view(["GET"])
     def get(self, request):
         content = {'message': 'Hello, GeeksforGeeks'}
         return Response(content)
